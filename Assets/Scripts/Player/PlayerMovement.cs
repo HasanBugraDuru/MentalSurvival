@@ -6,10 +6,12 @@ public class PlayerMovement : MonoBehaviour
 {
     [Header("Config")]
     [SerializeField]
-    private float speed;
+    private float speed, walkspeed, runspeed;
     private Vector2 moveDirection;
+    [SerializeField] private PlayerStats stats;
 
     private Player player;
+    private PlayerStamina stamina;
     private PlayerAnimations playeranimations;
     private PlayerActions actions;
     private Rigidbody2D rd2d;
@@ -18,6 +20,7 @@ public class PlayerMovement : MonoBehaviour
     {
         player = GetComponent<Player>();
         playeranimations = GetComponent<PlayerAnimations>();
+        stamina = GetComponent<PlayerStamina>();    
         rd2d = GetComponent<Rigidbody2D>();
         actions = new PlayerActions();
     }
@@ -29,8 +32,28 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate()
     {
         Move();
+        Run();
     }
     // Hareket Fonksiyonu
+    private void Run()
+    {
+        if(stats.Stamina<=0)
+        { 
+            speed = walkspeed;
+            stamina.GainStamina();
+            return;
+        }
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            speed = runspeed;
+            stamina.LostStamina();
+        }
+        else 
+        {
+            stamina.GainStamina();
+            speed = walkspeed; 
+        }
+    }
     private void Move()
     {
         if(player.Stats.Health <= 0f) return; 

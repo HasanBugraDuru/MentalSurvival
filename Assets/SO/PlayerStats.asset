@@ -14,13 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Health: 10
   MaxHealth: 10
-  Mental: 10
-  MaxMental: 10
-  Hunger: 10
-  MaxHunger: 10
+  Mental: 20
+  MaxMental: 20
+  Hunger: 50
+  MaxHunger: 50
   Sleep: 10
   MaxSleep: 10
   Heat: 10
   MaxHeat: 10
-  Stamina: 10
-  MaxStamina: 10
+  Stamina: 50
+  MaxStamina: 50
