@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b5ee71387278e94fb5359acc192cd8b, type: 3}
+  m_Name: PlayerStats
+  m_EditorClassIdentifier: 
+  Health: 10
+  MaxHealth: 10
+  Mental: 20
+  MaxMental: 20
+  Hunger: 50
+  MaxHunger: 50
+  Sleep: 10
+  MaxSleep: 10
+  Heat: 10
+  MaxHeat: 10
+  Stamina: 50
+  MaxStamina: 50
