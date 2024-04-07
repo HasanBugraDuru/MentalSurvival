@@ -1,4 +1,4 @@
 repository "MentalSurvival@isimsizgames@cloud"
   path "/"
-    smartbranch "/main" changeset "16"       
-     
+    br "/main"
+    co "/main"
