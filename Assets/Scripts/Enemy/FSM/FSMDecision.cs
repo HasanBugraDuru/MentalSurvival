@@ -4,6 +4,6 @@ using UnityEngine;
 
 public abstract class FSMDecision : MonoBehaviour
 {
-    public abstract void Decide();
+    public abstract bool Decide();
 
 }
