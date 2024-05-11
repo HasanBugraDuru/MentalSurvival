@@ -28,7 +28,7 @@ public class DecisionDetectPlayer : FSMDecision
 
         if (playerCollider != null)
         {
-            enemy.Player = playerCollider.transform;
+            enemy.Player = playerCollider.gameObject;
             Debug.Log("Player Detected");
             return true;
         }
